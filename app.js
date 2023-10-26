@@ -35,9 +35,11 @@ const error = require("./middlewares/error");
 // allows request from client side to go through
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL, "http://localhost:5174"],
+    origin: ["http://localhost:5174"],
   })
 );
+
+app.use(cors());
 
 //a middleware that allows access to the req.body on all requests (req.body would be undefined without this)
 app.use(express.json());

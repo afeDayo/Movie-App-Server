@@ -33,11 +33,11 @@ const error = require("./middlewares/error");
 
 // invoke cors this has to be above the order middleware
 // allows request from client side to go through
-app.use(
-  cors({
-    origin: ["http://localhost:5174"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:5174"],
+//   })
+// );
 
 app.use(cors());
 
